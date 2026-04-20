@@ -1,0 +1,33 @@
+# --- OS Specific ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# --- Backend (Django) ---
+backend/venv/
+backend/*.log
+backend/db.sqlite3
+backend/staticfiles/
+backend/media/
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+backend/.env
+
+# --- Frontend (Vite/Node) ---
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+frontend/*.local
+frontend/.env
+frontend/.env.*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# --- Build & Tooling ---
+.npm
+.eslintcache
+node_modules/
