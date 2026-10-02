@@ -30,6 +30,19 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'dj_rest_auth.jwt_auth.JWTCookieAuthentication',
+    )
+}
+
+REST_AUTH = {
+    'USE_JWT': True,
+    'JWT_AUTH_COOKIE': 'access',
+    'JWT_AUTH_REFRESH_COOKIE': 'refresh',
+    'JWT_AUTH_HTTPONLY': True, # Keeps the token hidden from JavaScript
+}
+
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173", 
     "http://localhost:5174", 
@@ -44,6 +57,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     #self_added
     'rest_framework',
+    'rest_framework.authtoken',
+    'dj_rest_auth',
     'corsheaders',
 ]
 
@@ -79,6 +94,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'core.wsgi.application'
+
+
 
 
 # Database
