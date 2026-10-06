@@ -1,0 +1,15 @@
+Backend:
+python manage.py runserver
+python manage.py createsuperuser
+python manage.py migrate
+
+source venv/bin/activate (starts virtual env)
+
+frontend:
+npm run dev
+npx shadcn@latest
+npx shadcn@latest add <whatever things>
+
+generic
+mkdir <folder name> (makes folder)
+touch  <file name> (makes file)
